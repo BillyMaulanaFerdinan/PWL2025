@@ -33,3 +33,16 @@ Route::get('/about', function () {
     return 'NIM: 2341720196<br>
             Nama: Billy Maulana Ferdinan';
     });
+
+Route::get('/user/{name}', function ($name) {
+    return 'Nama saya '.$name;
+    });
+
+Route::get('/posts/{post}/comments/{comment}', function
+($postId, $commentId) {
+return 'Pos ke-'.$postId." Komentar ke-: ".$commentId;
+});
+
+Route::get('/articles/{id}', function ($id) {
+    return 'Halaman Artikel dengan ID '.$id;
+    });
