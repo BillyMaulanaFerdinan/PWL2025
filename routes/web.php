@@ -49,3 +49,7 @@ Route::get('/about', AboutController::class);
 Route::get('/articles/{id}', ArticleController::class);
 
 Route::resource('photos', PhotoController::class);
+
+Route::get('/greeting', function () {
+    return view('hello', ['name' => 'Billy']);
+    });
